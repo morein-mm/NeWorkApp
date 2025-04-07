@@ -14,7 +14,7 @@
 //import dagger.hilt.android.AndroidEntryPoint
 //import ru.netology.nmedia.R
 //import ru.netology.nmedia.ui.PostDetailsFragment.Companion.postId
-//import ru.netology.nmedia.activity.ProfileFragment.Companion.userId
+//import ru.netology.nmedia.ui.ProfileFragment.Companion.userId
 //import ru.netology.nmedia.adapter.JobOnInteractionListener
 //import ru.netology.nmedia.adapter.JobsAdapter
 //import ru.netology.nmedia.adapter.UserOnInteractionListener
