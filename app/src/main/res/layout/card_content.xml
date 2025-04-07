@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--TODO - background color - res?-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_32dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:showDividers="middle">
+
+    <include
+        android:id="@+id/card_title_subtitle_audio"
+        layout="@layout/card_title_subtitle_audio" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:lineSpacingMultiplier="1.5"
+        android:textAppearance="@style/AppTheme.CardTextStyle.SubTitleAndContent"
+        tools:text="Слушайте, а как вы относитесь к тому, чтобы собраться большой компанией и поиграть в настолки? У меня есть несколько клевых игр, можем устроить вечер настолок! Пишите в лс или звоните" />
+
+    <!--    TODO: Underlined?-->
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/AppTheme.CardTextStyle.Link"
+        tools:text="https://m2.material.io/components/cards" />
+
+</LinearLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/feedFragment">
+
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="ru.netology.nmedia.ui.PostsFeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feedFragment_to_newPostFragment"
+            app:destination="@id/newPostFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_feedFragment_to_imageFragment"
+            app:destination="@id/imageAttachmentFragment"
+             />
+        <action
+            android:id="@+id/action_postsFeedFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="ru.netology.nmedia.ui.PostNewEditFragment"
+        android:label="fragment_new_post"
+        tools:layout="@layout/fragment_new_post_old" >
+        <action
+            android:id="@+id/action_newPostFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_newPostFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_newPostFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_newPostFragment_to_users_feed"
+            app:destination="@id/users_feed" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageAttachmentFragment"
+        android:name="ru.netology.nmedia.activity.ImageFragment"
+        android:label="fragment_image_attachment"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageAttachmentFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ru.netology.nmedia.ui.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="ru.netology.nmedia.activity.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="ru.netology.nmedia.ui.PostDetailsFragment"
+        android:label="PostDetailsFragment" >
+        <action
+            android:id="@+id/action_postDetailsFragment_to_users_feed"
+            app:destination="@id/users_feed" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.netology.nmedia.activity.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_self"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_newJobFragment"
+            app:destination="@id/newJobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/users_feed"
+        android:name="ru.netology.nmedia.ui.UsersFeedFragment"
+        android:label="UsersFeedFragment" >
+        <action
+            android:id="@+id/action_usersFeedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_usersFeedFragment_to_newEventFragment"
+            app:destination="@id/newEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobsFeedFragment"
+        android:name="ru.netology.nmedia.activity.JobsFeedFragment"
+        android:label="JobsFeedFragment" >
+        <action
+            android:id="@+id/action_jobsFeedFragment_to_newJobFragment"
+            app:destination="@id/newJobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newJobFragment"
+        android:name="ru.netology.nmedia.activity.NewJobFragment"
+        android:label="NewJobFragment" />
+    <fragment
+        android:id="@+id/events_feed"
+        android:name="ru.netology.nmedia.ui.EventsFeedFragment"
+        android:label="EventsFeedFragment" >
+        <action
+            android:id="@+id/action_eventsFeedFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_eventsFeedFragment_to_usersFeedFragment"
+            app:destination="@id/users_feed" />
+        <action
+            android:id="@+id/action_eventsFeedFragment_to_newEventFragment"
+            app:destination="@id/newEventFragment" />
+        <action
+            android:id="@+id/action_eventsFeedFragment_to_newEventFragment2"
+            app:destination="@id/newEventFragment" />
+        <action
+            android:id="@+id/action_events_feed_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_events_feed_to_eventNewEditFragment"
+            app:destination="@id/eventNewEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEventFragment"
+        android:name="ru.netology.nmedia.activity.NewEventFragment"
+        android:label="fragment_new_event"
+        tools:layout="@layout/fragment_new_event" >
+        <action
+            android:id="@+id/action_newEventFragment_to_users_feed"
+            app:destination="@id/users_feed" />
+        <action
+            android:id="@+id/action_newEventFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_newEventFragment_to_eventNewEditFragment"
+            app:destination="@id/eventNewEditFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_signInFragment"
+        app:destination="@id/signInFragment" />
+    <action
+        android:id="@+id/action_global_newPostFragment"
+        app:destination="@id/newPostFragment" />
+    <action
+        android:id="@+id/action_global_signUpFragment"
+        app:destination="@id/signUpFragment" />
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment" />
+    <action
+        android:id="@+id/action_global_feedFragment"
+        app:destination="@id/feedFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="ru.netology.nmedia.ui.MapsFragment"
+        android:label="MapsFragment" />
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="ru.netology.nmedia.ui.EventDetailsFragment"
+        android:label="EventDetailsFragment" />
+    <fragment
+        android:id="@+id/eventNewEditFragment"
+        android:name="ru.netology.nmedia.ui.EventNewEditFragment"
+        android:label="EventNewEditFragment" >
+        <action
+            android:id="@+id/action_eventNewEditFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_eventNewEditFragment"
+        app:destination="@id/eventNewEditFragment" />
+</navigation>

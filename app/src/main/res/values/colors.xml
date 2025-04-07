@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F3EDF7</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="divider_color">#ccc</color>
+
+
+    <color name="bottom_nav_background">#F3EDF7</color> <!-- Фон -->
+    <!-- Active icon and text color -->
+    <color name="bottom_nav_icon_background_active">#E8DEF8</color>
+    <color name="bottom_nav_icon_active">#49454F</color>
+    <color name="bottom_nav_text_active">#1D1B20</color>
+
+    <!-- Inactive icon and text color -->
+    <color name="bottom_nav_icon_inactive">#1D1B20</color>
+    <color name="bottom_nav_text_inactive">#49454F</color>
+
+
+    <!-- Цвета для AppBar -->
+    <color name="appbar_background">#FEF7FF</color>
+    <color name="appbar_title">#1D1B20</color>
+    <color name="menu_icon">#1D1B20</color>
+
+
+    <color name="active_color">#6750A4</color> <!-- Основной цвет интерфейса (например, акцентный цвет) -->
+    <color name="fill_color">#E6E0E9</color> <!-- Цвет фона полей ввода -->
+    <color name="input_text_color">#1D1B20</color> <!-- Цвет текста, вводимого в поля -->
+    <color name="white">#FFFFFF</color> <!-- Белый цвет, используется для текста кнопок -->
+
+
+</resources>

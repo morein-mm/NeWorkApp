@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!--TODO - background color - res?-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_users_data"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_10dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/AppTheme.CardTextStyle.Title"
+        tools:text="Likers" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--    TODO: Как сделать правильный цвет не checked иконки и шрифта -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/like"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:checkable="true"
+            android:contentDescription="@string/like"
+            android:textAppearance="@style/AppTheme.IconButton.TextStyle"
+            tools:text="@sample/posts.json/data/likes" />
+
+
+        <!--    TODO: Как сделать правильный цвет шрифта -->
+        <!--    TODO: Указат корректный дескрипшн-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/users"
+            style="@style/AppTheme.IconButtonLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:checkable="true"
+            android:contentDescription="@string/like"
+            android:textAppearance="@style/AppTheme.IconButton.TextStyle"
+            app:icon="@drawable/ic_users_24dp"
+            tools:checked="@sample/posts.json/data/likedByMe"
+            tools:text="@sample/posts.json/data/likes" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/card_users_line"
+                layout="@layout/card_users_line" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

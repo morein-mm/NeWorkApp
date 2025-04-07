@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--TODO - background color - res?-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+<!--TODO: TextColor MaterialToolbar в настройки/стили-->
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/include_appbarlayout"-->
+<!--        style="@style/AppTheme.IncludeAppBar"-->
+<!--        android:layout_width="match_parent">-->
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:navigationIcon="@drawable/ic_arrow_back_24px"-->
+<!--            app:title="Login"-->
+<!--            app:titleTextAppearance="@style/TopAppBarTextStyle"-->
+<!--            app:titleTextColor="#1D1B20">-->
+
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+</LinearLayout>

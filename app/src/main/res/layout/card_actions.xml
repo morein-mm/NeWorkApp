@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_32dp"
+    android:id="@+id/card_actions"
+    android:orientation="horizontal">
+
+    <!--    TODO: Как сделать правильный цвет не checked иконки и шрифта -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/like"
+        style="@style/Widget.AppTheme.LikeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_8dp"
+        android:checkable="true"
+        android:contentDescription="@string/like"
+        android:textAppearance="@style/AppTheme.IconButton.TextStyle"
+        tools:checked="@sample/posts.json/data/likedByMe"
+        tools:text="@sample/posts.json/data/likes" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/share"
+        style="@style/AppTheme.IconButtonLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/share"
+        app:icon="@drawable/ic_share_24" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--    TODO: Как сделать правильный цвет шрифта -->
+<!--    TODO: Указат корректный дескрипшн-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/users"
+        style="@style/AppTheme.IconButtonLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_8dp"
+        android:checkable="true"
+        android:contentDescription="@string/like"
+        android:textAppearance="@style/AppTheme.IconButton.TextStyle"
+        app:icon="@drawable/ic_users_24dp"
+        tools:checked="@sample/posts.json/data/likedByMe"
+        tools:text="@sample/posts.json/data/likes" />
+
+</LinearLayout>

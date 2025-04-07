@@ -1,0 +1,236 @@
+<resources>
+
+    <!-- Стиль AppBar -->
+    <style name="AppBarStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/appbar_background</item>
+        <item name="android:layout_height">@dimen/appbar_height</item>
+        <item name="contentInsetStart">@dimen/appbar_padding_start</item>
+        <item name="contentInsetEnd">@dimen/appbar_padding_end</item>
+        <item name="android:paddingTop">@dimen/appbar_padding_top</item>
+        <item name="android:paddingBottom">@dimen/appbar_padding_bottom</item>
+    </style>
+
+    <!-- Стиль текста заголовка AppBar -->
+    <style name="AppBarTitleTextStyle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">@dimen/appbar_title_text</item>
+        <item name="lineHeight">@dimen/appbar_title_line_height</item>
+        <item name="android:textColor">@color/appbar_title</item>
+    </style>
+
+    <!-- Стиль кнопки меню в AppBar -->
+    <style name="AppBarMenuButtonStyle">
+        <item name="android:layout_width">@dimen/menu_button</item>
+        <item name="android:layout_height">@dimen/menu_button</item>
+        <item name="iconSize">@dimen/menu_icon</item>
+        <item name="android:tint">@color/menu_icon</item>
+    </style>
+
+
+    <!-- Поле ввода, используется для полей логина и пароля -->
+    <style name="TextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/fill_color</item>
+        <item name="boxStrokeColor">@color/active_color</item>
+        <item name="hintTextColor">@color/active_color</item>
+    </style>
+
+    <!-- Кнопка Login, стиль заполненной кнопки -->
+    <style name="ButtonFilled" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/active_color</item>
+        <item name="cornerRadius">100dp</item> <!-- Радиус скругления углов кнопки -->
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Кнопка-ссылка, стиль текстовой кнопки -->
+    <style name="ButtonLink" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:paddingStart">@dimen/link_button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/link_button_padding_horizontal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/active_color</item>
+    </style>
+
+    <!-- Стиль текста для кнопок с заполненным фоном -->
+    <style name="AppTheme.ButtonBigTextStyle.Filled" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontWeight">500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Стиль текста для кнопок-ссылок -->
+    <style name="AppTheme.ButtonBigTextStyle.Link" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontWeight">500</item>
+        <item name="android:textColor">@color/active_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="lineHeight">@dimen/button_line_height</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--    <style name="AppTheme.IncludeAppBar">-->
+    <!--        <item name="android:paddingHorizontal">4dp</item>-->
+    <!--        <item name="android:paddingVertical">8dp</item>-->
+    <!--        <item name="android:layout_height">64dp</item>-->
+    <!--        <item name="android:background">#FEF7FF</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.ButtonBig">-->
+    <!--        <item name="backgroundTint">#6750A4</item>-->
+    <!--        <item name="textAllCaps">false</item>-->
+    <!--        <item name="android:paddingVertical">10dp</item>-->
+    <!--        <item name="android:paddingHorizontal">24dp</item>-->
+    <!--        <item name="cornerRadius">100dp</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.ButtonBig.Filled" parent="AppTheme.ButtonBig">-->
+    <!--        <item name="backgroundTint">#6750A4</item>-->
+    <!--    </style>-->
+
+    <!--    &lt;!&ndash;TODO: применяется ли LineHeight?&ndash;&gt;-->
+    <!--    <style name="AppTheme.ButtonBigTextStyle" parent="android:TextAppearance">-->
+    <!--        <item name="android:textSize">14dp</item>-->
+    <!--        <item name="android:lineHeight">20dp</item>-->
+    <!--        <item name="android:textFontWeight">500</item>-->
+    <!--        <item name="android:letterSpacing">0.1</item>-->
+    <!--    </style>-->
+
+
+    <style name="AppTheme.CardTextStyle.Monogram" parent="android:TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">500</item>
+        <!--        <item name="android:letterSpacing">0.15</item>-->
+        <item name="android:textColor">#FEF7FF</item>
+    </style>
+
+    <style name="AppTheme.CardTextStyle.Header" parent="android:TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">500</item>
+        <!--        <item name="android:letterSpacing">0.15</item>-->
+        <item name="android:textColor">#1D1B20</item>
+    </style>
+
+    <style name="AppTheme.CardTextStyle.Subheader" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textFontWeight">400</item>
+        <!--        <item name="android:letterSpacing">0.25</item>-->
+        <item name="android:textColor">#1D1B20</item>
+    </style>
+
+    <style name="AppTheme.CardTextStyle.Title" parent="android:TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">400</item>
+        <!--        <item name="android:letterSpacing">0.15</item>-->
+        <item name="android:textColor">#1D1B20</item>
+    </style>
+
+    <style name="AppTheme.CardTextStyle.SubTitleAndContent" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textFontWeight">400</item>
+        <!--        <item name="android:letterSpacing">0.15</item>-->
+        <item name="android:textColor">#49454F</item>
+    </style>
+
+    <style name="AppTheme.CardTextStyle.Link" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textFontWeight">400</item>
+        <!--        <item name="android:letterSpacing">0.15</item>-->
+        <item name="android:textColor">#6750A4</item>
+    </style>
+
+
+    <style name="AppTheme.IconButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">#79747E</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="AppTheme.IconButtonLong" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconTint">#6750A4</item>m>-->
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <style name="Widget.AppTheme.LikeCheckBox" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="icon">@drawable/ic_like_selector</item>
+        <item name="iconTint">#6750A4</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textColor">#6750A4</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <style name="AppTheme.IconButton.TextStyle" parent="android:TextAppearance">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">#6750A4</item>
+    </style>
+
+
+    <style name="Widget.AppTheme.TopAppBar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">22dp</item>
+    </style>
+
+
+    <!--    <style name="Widget.AppTheme.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">-->
+    <!--        &lt;!&ndash;        <item name="materialThemeOverlay">@style/ThemeOverlay.AppTheme.BottomNavigationView</item>&ndash;&gt;-->
+    <!--        <item name="android:paddingVertical">@dimen/spacing_8dp</item>-->
+    <!--        <item name="itemTextColor">#49454F</item>-->
+    <!--        <item name="itemIconTint">#1D1B20</item>-->
+    <!--    </style>-->
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!--        TODO: исправить выделение прямоугольником - только для иконки -->
+        <!--        TODO: начертание шрифта -->
+        <item name="itemBackground">@drawable/bottom_nav_item_background</item>
+        <item name="backgroundTint">@color/bottom_nav_background</item>
+        <item name="itemIconTint">@color/bottom_nav_item_icon</item>
+        <item name="itemTextColor">@color/bottom_nav_item_text</item>
+        <item name="android:paddingVertical">@dimen/spacing_8dp</item>
+    </style>
+
+    <style name="SquareFAB" parent="">
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <!--    <style name="ThemeOverlay.AppTheme.BottomNavigationView" parent="">-->
+    <!--        <item name="android:paddingVertical">@dimen/spacing_8dp</item>-->
+    <!--        <item name="itemTextColor">#49454F</item>-->
+    <!--        <item name="itemIconTint">#1D1B20</item>-->
+    <!--        <item name="backgroundTint">#F3EDF7</item>-->
+    <!--    </style>-->
+
+
+    <!--TODO: как сделать, чтобы применялся weight, и применяется ли fontFamily и LineHeight?-->
+    <style name="TopAppBarTextStyle" parent="android:TextAppearance">
+        <item name="android:textSize">22dp</item>
+        <item name="lineHeight">28dp</item>
+        <item name="fontWeight">900</item>
+        <item name="fontFamily">Roboto</item>
+    </style>
+
+</resources>
