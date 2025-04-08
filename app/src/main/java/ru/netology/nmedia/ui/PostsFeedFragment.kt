@@ -78,7 +78,7 @@ class PostsFeedFragment : Fragment() {
                     val shareIntent =
                         Intent.createChooser(
                             intent,
-                            getString(R.string.chooser_share_post)
+                            getString(R.string.share)
                         )
                     startActivity(shareIntent)
                 }

@@ -79,8 +79,7 @@ class EventsFeedFragment : Fragment() {
                     val shareIntent =
                         Intent.createChooser(
                             intent,
-//                            @TODO
-                            getString(R.string.chooser_share_post)
+                            getString(R.string.share)
                         )
                     startActivity(shareIntent)
                 }
