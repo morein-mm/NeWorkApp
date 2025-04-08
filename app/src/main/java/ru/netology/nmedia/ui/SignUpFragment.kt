@@ -1,4 +1,4 @@
-package ru.netology.nmedia.activity
+package ru.netology.nmedia.ui
 
 import android.app.Activity
 import android.os.Bundle
@@ -52,8 +52,6 @@ class SignUpFragment : Fragment() {
                     }
                 }
             }
-
-//        TODO: Правильно ли только на аватар, есть же еще камера?
 
         binding.avatar.setOnClickListener {
             ImagePicker.with(this)

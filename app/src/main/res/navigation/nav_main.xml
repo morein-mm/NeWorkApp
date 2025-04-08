@@ -35,7 +35,7 @@
         android:id="@+id/newPostFragment"
         android:name="ru.netology.nmedia.ui.PostNewEditFragment"
         android:label="fragment_new_post"
-        tools:layout="@layout/fragment_new_post_old" >
+        tools:layout="@layout/fragment_new_post_old">
         <action
             android:id="@+id/action_newPostFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
@@ -53,7 +53,7 @@
         android:id="@+id/signInFragment"
         android:name="ru.netology.nmedia.ui.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" >
+        tools:layout="@layout/fragment_sign_in">
         <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/postDetailsFragment"
         android:name="ru.netology.nmedia.ui.PostDetailsFragment"
-        android:label="PostDetailsFragment" >
+        android:label="PostDetailsFragment">
         <action
             android:id="@+id/action_postDetailsFragment_to_users_feed"
             app:destination="@id/users_feed" />
@@ -75,7 +75,7 @@
         android:id="@+id/profileFragment"
         android:name="ru.netology.nmedia.ui.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_self"
             app:destination="@id/profileFragment" />
@@ -86,7 +86,7 @@
     <fragment
         android:id="@+id/users_feed"
         android:name="ru.netology.nmedia.ui.UsersFeedFragment"
-        android:label="UsersFeedFragment" >
+        android:label="UsersFeedFragment">
         <action
             android:id="@+id/action_usersFeedFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
@@ -97,7 +97,7 @@
     <fragment
         android:id="@+id/jobsFeedFragment"
         android:name="ru.netology.nmedia.activity.JobsFeedFragment"
-        android:label="JobsFeedFragment" >
+        android:label="JobsFeedFragment">
         <action
             android:id="@+id/action_jobsFeedFragment_to_newJobFragment"
             app:destination="@id/newJobFragment" />
@@ -109,7 +109,7 @@
     <fragment
         android:id="@+id/events_feed"
         android:name="ru.netology.nmedia.ui.EventsFeedFragment"
-        android:label="EventsFeedFragment" >
+        android:label="EventsFeedFragment">
         <action
             android:id="@+id/action_eventsFeedFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
@@ -133,7 +133,7 @@
         android:id="@+id/newEventFragment"
         android:name="ru.netology.nmedia.activity.NewEventFragment"
         android:label="fragment_new_event"
-        tools:layout="@layout/fragment_new_event" >
+        tools:layout="@layout/fragment_new_event">
         <action
             android:id="@+id/action_newEventFragment_to_users_feed"
             app:destination="@id/users_feed" />
@@ -170,7 +170,7 @@
     <fragment
         android:id="@+id/eventNewEditFragment"
         android:name="ru.netology.nmedia.ui.EventNewEditFragment"
-        android:label="EventNewEditFragment" >
+        android:label="EventNewEditFragment">
         <action
             android:id="@+id/action_eventNewEditFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
