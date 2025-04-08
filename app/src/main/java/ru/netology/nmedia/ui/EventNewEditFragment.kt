@@ -3,7 +3,6 @@ package ru.netology.nmedia.ui
 import android.app.Activity
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,12 +19,9 @@ import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import ru.netology.nmedia.R
-import ru.netology.nmedia.activity.BottomSheetDialogFragment
 import ru.netology.nmedia.databinding.FragmentNewEventBinding
-import ru.netology.nmedia.databinding.FragmentNewPostBinding
 import ru.netology.nmedia.enumeration.AttachmentType
 import ru.netology.nmedia.viewmodel.EventViewModel
-import ru.netology.nmedia.viewmodel.PostViewModel
 import java.io.File
 
 @AndroidEntryPoint
