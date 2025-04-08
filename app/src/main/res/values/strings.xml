@@ -82,7 +82,7 @@
     <string name="set_placemark">Set placemark</string>
     <string name="replace_attachment">Replace attachment?</string>
     <string name="you_have_already_added_an_atatchment">You have already added an attachment. If you continue, the current attachment will be removed. Continue?</string>
-    <string name="continue_action">continue_action</string>
+    <string name="continue_action">Continue action</string>
     <string name="content_can_not_be_empty">Content can not be empty</string>
     <string name="mentioned">Mentioned</string>
     <string name="looking_for_a_job">Looking for a job</string>
