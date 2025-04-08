@@ -44,11 +44,9 @@
     <string name="password_confirm">Подтверждение пароля</string>
     <string name="student">Студент</string>
     <string name="don_t_have_an_account_register">Нет аккаунта? Зарегистрируйся</string>
-    <string name="don_t_have_an_account_register">Н</string>
     <string name="cannot_be_empty">" не может быть пустым"</string>
     <string name="tatiana_press">Татьяна Пресс</string>
     <string name="password_and_password_confirmation_must_match">Пароль и подтверждение пароля должны совпадать</string>
-    <string name="password_and_password_confirmation_must_match">П</string>
     <string name="posts">Посты</string>
     <string name="events">События</string>
     <string name="users">Пользователи</string>
