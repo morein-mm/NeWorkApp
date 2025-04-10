@@ -160,14 +160,11 @@ class EventNewEditFragment : Fragment() {
 
         binding.selectUsers.setOnClickListener {
             findNavController().navigate(
-//                @TODO
-                R.id.action_newPostFragment_to_users_feed,
+                R.id.action_eventNewEditFragment_to_users_feed,
                 Bundle().apply {
                     putBoolean("isSelectionMode", true)
-                    putLongArray(
-                        "participantsIds",
-                        viewModel.edited.value?.participantsIds?.toLongArray()
-                    )
+                    putLongArray("userIds", viewModel.edited.value?.speakerIds?.toLongArray())
+                    putString("source", "event")
                 }
             )
         }

@@ -15,26 +15,24 @@ import ru.netology.nmedia.adapter.UserOnInteractionListener
 import ru.netology.nmedia.adapter.UsersAdapter
 import ru.netology.nmedia.databinding.FragmentUsersFeedBinding
 import ru.netology.nmedia.dto.User
-import ru.netology.nmedia.util.StringArg
 import ru.netology.nmedia.viewmodel.UserViewModel
 
 @AndroidEntryPoint
 open class UsersFeedFragment : Fragment() {
 
-    companion object {
-        var Bundle.viewType: String? by StringArg
-    }
-
     private val viewModel: UserViewModel by activityViewModels()
 //    private val viewModelEvent: EventViewModel by activityViewModels()
 
     private var isSelectionMode: Boolean = false
-    private var mentionIds: List<Long> = emptyList()
+    private var userIds: List<Long> = emptyList()
+    private val source: String? by lazy {
+        arguments?.getString("source")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         isSelectionMode = arguments?.getBoolean("isSelectionMode", false) ?: false
-        mentionIds = arguments?.getLongArray("mentionIds")?.toList() ?: emptyList()
+        userIds = arguments?.getLongArray("mentionIds")?.toList() ?: emptyList()
     }
 
     override fun onCreateView(
@@ -45,22 +43,7 @@ open class UsersFeedFragment : Fragment() {
 
         val binding = FragmentUsersFeedBinding.inflate(inflater, container, false)
 
-        viewModel.setSelectedUsers(mentionIds)
-
-//        val viewType =
-//            try {
-//                ViewType.entries.last { it.name == arguments?.viewType }
-//            } catch (e: NoSuchElementException) {
-//                ViewType.FEED
-//            }
-//
-//        val userIds = arguments?.getLongArray("userIds")
-
-//        if (viewType == ViewType.FEED_WITH_SELECT && userIds != null) {
-//            userIds.forEach { id ->
-//                viewModel.selectUser(id)
-//            }
-//        }
+        viewModel.setSelectedUsers(userIds)
 
         val adapter = UsersAdapter(
             object : UserOnInteractionListener {
@@ -83,8 +66,7 @@ open class UsersFeedFragment : Fragment() {
 
             },
             isSelectionMode,
-            mentionIds
-//            viewType
+            userIds
         )
 
         binding.usersFeed.adapter = adapter
@@ -127,43 +109,6 @@ open class UsersFeedFragment : Fragment() {
                 }
             }
         }
-
-
-//        viewModel.data.observe(viewLifecycleOwner) { model ->
-//            adapter.submitList(model.users) {
-//                binding.emptyText.isVisible = model.empty
-//            }
-//        }
-
-//        viewModel.data.observe(viewLifecycleOwner) { model ->
-//            if (viewType == ViewType.FEED_WITH_SELECT) {
-//                viewModel.selectedUsers.observe(viewLifecycleOwner) { selectedUsers ->
-//                    val list: List<User> = model.users.map { user ->
-//                        if (selectedUsers?.contains(user.id) == true) {
-//                            user.copy(isSelected = true)
-//                        } else {
-//                            user
-//                        }
-//                    }
-//                    adapter.submitList(list) {
-//                        binding.emptyText.isVisible = model.empty
-//                    }
-//                }
-//            } else {
-//
-//                val filteredUsers = userIds?.let { ids ->
-//                    model.users.filter { it.id in ids }
-//                } ?: model.users
-//
-//                adapter.submitList(filteredUsers) {
-//                    binding.emptyText.isVisible = filteredUsers.isEmpty()
-//                }
-//
-////                adapter.submitList(model.users) {
-////                    binding.emptyText.isVisible = model.empty
-////                }
-//            }
-//        }
 
         binding.swiperefresh.setOnRefreshListener {
             viewModel.loadUsers()
