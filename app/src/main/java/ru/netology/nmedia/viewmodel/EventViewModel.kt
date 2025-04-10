@@ -109,7 +109,7 @@ class EventViewModel @Inject constructor(
         _edited.value = edited.value?.copy(coords = Coordinates(lat, long))
     }
 
-    fun updateSpeakerIds(speakerIds: List<Long>?) {
+    fun updateSpeackerIds(speakerIds: List<Long>?) {
         _edited.value = _edited.value?.copy(speakerIds = speakerIds)
     }
 

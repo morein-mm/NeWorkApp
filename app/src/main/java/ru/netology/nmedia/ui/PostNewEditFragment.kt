@@ -165,7 +165,8 @@ class PostNewEditFragment : Fragment() {
                 R.id.action_newPostFragment_to_users_feed,
                 Bundle().apply {
                     putBoolean("isSelectionMode", true)
-                    putLongArray("mentionIds", viewModel.edited.value?.mentionIds?.toLongArray())
+                    putLongArray("userIds", viewModel.edited.value?.mentionIds?.toLongArray())
+                    putString("source", "post")
                 }
             )
         }

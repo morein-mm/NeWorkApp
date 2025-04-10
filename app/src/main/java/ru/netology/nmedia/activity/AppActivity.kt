@@ -274,9 +274,14 @@ class AppActivity : AppCompatActivity(R.layout.activity_app) {
 
                     is UsersFeedFragment -> {
                         val selectedUsers = currentFragment.getSelectedUsers()
-                        // Обновляем mentionedIds в ViewModel поста
-                        viewModelPosts.updateMentionedIds(if (selectedUsers.isNotEmpty()) selectedUsers else null)
-                        // Переходим обратно в фрагмент редактирования поста
+                        val source = currentFragment.arguments?.getString("source")
+                        when (source) {
+                            "post" -> viewModelPosts.updateMentionedIds(if (selectedUsers.isNotEmpty()) selectedUsers else null)
+                            "event" -> viewModelEvents.updateSpeackerIds(if (selectedUsers.isNotEmpty()) selectedUsers else null)
+                            else -> {
+                                Toast.makeText(this, "Unknown source", Toast.LENGTH_SHORT).show()
+                            }
+                        }
                         findNavController(R.id.nav_host_fragment).popBackStack()
                     }
 
