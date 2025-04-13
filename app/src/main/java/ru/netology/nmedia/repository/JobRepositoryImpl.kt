@@ -8,6 +8,7 @@ import okio.IOException
 import ru.netology.nmedia.api.ApiService
 import ru.netology.nmedia.dao.JobDao
 import ru.netology.nmedia.dto.Job
+import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.entity.JobEntity
 import ru.netology.nmedia.entity.toDto
 import ru.netology.nmedia.error.ApiError
@@ -23,6 +24,17 @@ class JobRepositoryImpl @Inject constructor(
     override val data: Flow<List<Job>> = dao.getAll().map {
         it.toDto()
     }.flowOn(Dispatchers.Default)
+
+    override suspend fun getJobs(userId: Long) {
+        val response = apiService.getJobsByUserId(userId)
+        if (!response.isSuccessful) throw ApiError(response.code(), response.message())
+        val jobs = response.body() ?: throw ApiError(response.code(), "Empty body")
+        dao.insert(jobs.map(JobEntity::fromDto))
+    }
+
+    override suspend fun clearJobs() {
+        dao.clear()
+    }
 
     override suspend fun save(job: Job) {
         try {
@@ -52,4 +64,5 @@ class JobRepositoryImpl @Inject constructor(
             throw UnknownError
         }
     }
+
 }
