@@ -96,7 +96,7 @@
     </fragment>
     <fragment
         android:id="@+id/jobsFeedFragment"
-        android:name="ru.netology.nmedia.activity.JobsFeedFragment"
+        android:name="ru.netology.nmedia.activity.UserJobsFragment"
         android:label="JobsFeedFragment">
         <action
             android:id="@+id/action_jobsFeedFragment_to_newJobFragment"

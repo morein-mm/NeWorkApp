@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
 import ru.netology.nmedia.R
+import ru.netology.nmedia.adapter.ViewPagerAdapter
 import ru.netology.nmedia.auth.AppAuth
 import ru.netology.nmedia.databinding.FragmentProfileBinding
 import ru.netology.nmedia.util.LongArg
@@ -29,18 +32,10 @@ class ProfileFragment : Fragment() {
     private val viewModelUser: UserViewModel by activityViewModels()
 
     //    private val viewModelJob: JobViewModel by activityViewModels()
-    private val viewModelPost: PostViewModel by activityViewModels()
 
     companion object {
         var Bundle.userId: Long by LongArg
     }
-
-
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        viewModelJob.setUserId(0)
-//        viewModelPost.setUserId(0)
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,35 +48,32 @@ class ProfileFragment : Fragment() {
             false
         )
 
-
-        Log.d("ProfileFragment", "Profile fragment loaded")
-//        val userId = arguments?.userId ?: 0
         val userId = arguments?.getLong("userId") ?: appAuth.state.value?.id
 
-//        val viewPager = binding.viewPagerUser
-//        val viewPagerUserAdapter = ViewPagerAdapter(this, userId)
-//        viewPager.adapter = viewPagerUserAdapter
-//
-//        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-//            override fun onPageSelected(position: Int) {
-//                binding.profileTabs.getTabAt(position)?.select()
-//            }
-//        })
-//
-//        binding.profileTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-//            override fun onTabReselected(tab: TabLayout.Tab?) {
-//                viewPager.currentItem = tab!!.position
-//            }
-//
-//            override fun onTabUnselected(p0: TabLayout.Tab?) {
-//            }
-//
-//            override fun onTabSelected(tab: TabLayout.Tab?) {
-//                viewPager.currentItem = tab!!.position
-//            }
-//
-//
-//        })
+        val viewPager = binding.viewPagerUser
+        val viewPagerUserAdapter = userId?.let { ViewPagerAdapter(this, it) }
+        viewPager.adapter = viewPagerUserAdapter
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                binding.profileTabs.getTabAt(position)?.select()
+            }
+        })
+
+        binding.profileTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                viewPager.currentItem = tab!!.position
+            }
+
+            override fun onTabUnselected(p0: TabLayout.Tab?) {
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                viewPager.currentItem = tab!!.position
+            }
+
+
+        })
 
 //        viewModelUser.data.observe(viewLifecycleOwner) { userModel ->
 //            userModel.users.find { it.id == userId }.let { user ->
